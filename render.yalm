@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: telegram-bot-puente
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn main:app
+    envVars:
+      - key: BOT_TOKEN
+        value: tu_token_sin_comillas
